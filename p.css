@@ -405,10 +405,32 @@ nav {
     text-decoration: none;
     font-family: "Inter", sans-serif;
     color: black;
+    font-size: 30px;
+    font-size: 550;
+    margin-left: 49px;
+    padding-top: 33px;
+}
+
+#sub_New {
+    display: flex;
+    text-decoration: none;
+    font-family: "Inter", sans-serif;
+    color: black;
+    font-size: 18px;
+    margin-top: -25px;
+    font-size: 550;
+    margin-left: 49px;
+}
+
+#sub_Newx {
+    display: flex;
+    text-decoration: none;
+    font-family: 'The Nautigal', sans-serif;
+    color: black;
     font-size: 28px;
+    margin-top: -25px;
     font-size: 550;
     margin-left: 50px;
-    padding-top: 33px;
 }
 
 
@@ -539,7 +561,7 @@ body::-webkit-scrollbar-thumb {
         display: block;
         float: right;
         margin-top: 5px;
-        margin-left: 360px;
+        margin-left: 345px;
         z-index: 1;
     }
 
