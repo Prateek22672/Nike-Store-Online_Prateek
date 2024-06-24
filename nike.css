@@ -118,10 +118,32 @@ nav {
     text-decoration: none;
     font-family: "Inter", sans-serif;
     color: black;
+    font-size: 30px;
+    font-size: 550;
+    margin-left: 49px;
+    padding-top: 33px;
+}
+
+#sub_New {
+    display: flex;
+    text-decoration: none;
+    font-family: "Inter", sans-serif;
+    color: black;
+    font-size: 18px;
+    margin-top: -25px;
+    font-size: 550;
+    margin-left: 49px;
+}
+
+#sub_Newx {
+    display: flex;
+    text-decoration: none;
+    font-family: 'The Nautigal', sans-serif;
+    color: black;
     font-size: 28px;
+    margin-top: -25px;
     font-size: 550;
     margin-left: 50px;
-    padding-top: 33px;
 }
 
 .search-box {
@@ -685,3 +707,4 @@ body::-webkit-scrollbar-thumb {
         margin-left: 50px;
     }
 }
+
