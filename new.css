@@ -1,3 +1,4 @@
+/* General Reset and Box Sizing */
 * {
     margin: 0;
     padding: 0;
@@ -5,22 +6,19 @@
 }
 
 body {
+    background: url(login4.jpg);
     font-family: Arial, Helvetica, sans-serif;
-    background-image: url(login1.jpg);
-    position: relative;
-    background-repeat: no-repeat;
-    min-height: 100vh;
-    background-size: cover;
-    background-position: center;
-    background-position-y: 100px;
+    background-position-y: -25%;
+    font-family: 'Radio Canada Big', sans-serif;
+    overflow-x: hidden; /* Prevent horizontal overflow */
 }
 
 body::before {
     content: "";
     position: absolute;
     width: 100%;
-    height: 100%;
-    background-image: url(login1.jpg); /* Ensure the image path is correct */
+    height: 200%;
+    background-image: url(login4.jpg); /* Ensure the image path is correct */
     background-size: cover;
     background-position: center;
     filter: blur(5px); /* Adjust the brightness to make it darker */
@@ -28,6 +26,7 @@ body::before {
     background-position-y: 100px;
 }
 
+/* Header Styling */
 header {
     background-color: white;
     width: 100%;
@@ -96,63 +95,55 @@ nav {
 .cta:hover {
     border-radius: 40px;
     border-color: black;
-
 }
 
-/* Media Queries for Responsiveness */
-@media (max-width: 800px) {
-    header {
-        flex-direction: column;
-        align-items: center;
-        background-color: white;
-    }
-
-    .logos {
-        justify-content: center;
-        margin-bottom: 10px;
-        margin-left: 85px;
-    }
-
-    nav {
-        margin-right: 0;
-    }
-
-    .nav_links {
-        flex-direction: column;
-        margin-top: 30px;
-        align-items: center;
-    }
-
-    .nav_links li {
-        padding: 10px 0;
-    }
-
-    .cta {
-        margin: 15px 0;
-    }
+.checkbtn i {
+    display: none;
 }
 
-
-@media (max-width: 1000px) {
-
-    .logos {
-        justify-content: center;
-        margin-bottom: 10px;
-        margin-right: 30px;
-        margin-left: -10px;
-    }
-
-    .j {
-        margin-left: 50px;
-    }
-
-
-}
-/*------Search_bar_Code-------------------*/
-
+/* Search Bar Styling */
 .box {
     max-width: 550px;
     width: 100%;
+}
+
+.btn-close {
+    font-size: 25px;
+    padding-top: 50px;
+    margin-left: 320px;
+}
+
+.offcanvas-body a{
+    display: flex;
+    text-decoration: none;
+    font-family: "Inter", sans-serif;
+    color: black;
+    font-size: 30px;
+    font-size: 550;
+    margin-left: 49px;
+    padding-top: 33px;
+}
+
+#sub_New {
+    display: flex;
+    text-decoration: none;
+    font-family: "Inter", sans-serif;
+    color: black;
+    font-size: 18px;
+    margin-top: -25px;
+    font-size: 550;
+    margin-left: 49px;
+}
+
+#sub_Newx {
+    display: flex;
+    text-decoration: none;
+    font-family: 'The Nautigal', sans-serif;
+    color: black;
+    font-size: 28px;
+    margin-top: -25px;
+    font-size: 550;
+    margin-left: 50px;
 }
 
 .search-box {
@@ -195,7 +186,7 @@ nav {
     border-radius: 40px;
 }
 
-#chech:checked ~ .search-box .icon {
+#check:checked ~ .search-box .icon {
     background: wheat;
     color: #fff;
     width: 20px;
@@ -207,6 +198,7 @@ nav {
     display: none;
 }
 
+/* Section Styling */
 .x {
     width: 100%;
     background-image: url(login2.jpg);
@@ -218,153 +210,166 @@ nav {
     margin-left: 0px;
 }
 
-@media (max-width: 800px) {
-    .x {
-        margin-left: 10.5px;
 
-    }
-
-    .buyx {
-        margin-top: 50px;
-    }
-}
-
-/*-----Animated_Cards-----------------*/
-
-.xn {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    height: 80vh;
-    align-items: center;
-    justify-content: center;
-}
-
-.xn input {
-    display: none;
-}
-
-.container {
-    height: 400px;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: start;
-    overflow-x: auto;
-}
-
-.card {
-    width: 80px;
-    border-radius: .75rem;
-    background-size: cover;
-    cursor: pointer;
-    overflow: hidden;
-    border-radius: 2rem;
-    margin: 0 10px;
-    display: flex;
-    align-items: flex-end;
-    transition: .6s cubic-bezier(.28, -0.03, 0, .99);
-    flex-shrink: 0;
-}
-
-.card > .row {
-    display: flex;
-    flex-wrap: nowrap;
-}
-
-.card > .row > .icon {
-    background: #223;
-    color: white;
-    border-radius: 50%;
-    width: 95px; /* Adjusted width */
-    height: 50px; /* Adjusted height */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 15px;
-    font-size: 20px; /* Adjusted font size */
-}
-
-
-.card > .row > .description {
-    display: flex;
-    font-size: 14px;
-    flex-direction: column;
-    text-align: center; /* Center text horizontally */
-    overflow: hidden;
-    width: 100%; /* Ensure full width */
-    height: auto; /* Allow auto height */
-    opacity: 0;
-    transition-delay: .9s;
-    transition: all .6s cubic-bezier(.28, -0.03, 0, .99);
-    color: black;
-    margin-top: auto; /* Push to the bottom */
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.card:hover {
-    width: 600px;
-}
-
-.card:hover .description {
-    opacity: 1;
-    color: #000;
-}
-
-/*----Card_New_Shoes_images---------------------*/
-
-.card[for="c1"] {
-    background-image: url('new1.png');
-}
-.card[for="c2"] {
-    background-image: url('new2.png');
-}
-.card[for="c3"] {
-    background-image: url('new3.png');
-}
-.card[for="c4"] {
-    background-image: url('new4.png');
-}
-.card[for="c5"] {
-    background-image: url('new5.png');
-}
-.card[for="c6"] {
-    background-image: url('new6.png');
-}
-.card[for="c7"] {
-    background-image: url('new7.png');
-}
-.card[for="c8"] {
-    background-image: url('new8.png');
-}
-.card[for="c9"] {
-    background-image: url('new9.png');
-}
-.card[for="c10"] {
-    background-image: url('new10.png');
-}
-
-.brand {
-    margin-top: 50px;
-    font-size: 100px;
-    font-family: 'The Nautigal', sans-serif;
-    color: white;
-    text-align: center;
-    font-weight: 600;
-    padding:30px;
-}
-
-.b1 {
-    width: 150px;
+/* Shoes Image Styling */
+.jordan {
+    width: 10%;
     display: block;
     margin: auto;
+    margin-top: 5%;
 }
 
-/*-----Scrolling_Code---------------------*/
+.pega {
+    width: 60%;
+    display: block;
+    margin: auto;
+    border-radius: 30px;
+    margin-bottom: 27px;
+    margin-top: 4.6%;
+    transition: transform 0.3s ease;
+}
 
+.pega:hover {
+    transform: scale(1.03);
+    transition: transform 0.3s ease;
+}
 
-.scroll-left {
+.date {
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.model {
+    position: absolute;
+    width: 100%;
+    height: 80px;
+    text-align: center;
+    font-weight: 1000;
+    font-size: 40px;
+    font-family: "Helvetica Now Text Medium", Helvetica, Arial, sans-serif;
+    font-family: 'Paytone One', sans-serif;
+    color: white;
+}
+
+.brand1 {
+    margin-top: 80px;
+    font-size: 50px;
+    font-family: 'The Nautigal', sans-serif;
+    color: rgb(160, 137, 72);
+    text-align: center;
+}
+
+.h1 {
+    margin-top: 90px;
+    text-align: left;
+    margin-left: 60px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Radio Canada Big', sans-serif;
+    font-size: 30px;
+    padding: 30px;
+    color: white;
+}
+
+/* Side Scrolling Image Part */
+.container {
+    max-height: 700px;
+    border: 1px solid #ddd;
+    margin-left: 80px;
+    display: flex;
+    overflow-x: auto;
+    border-radius: 30px;
+    background-color: white;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 25px;
+}
+
+.container::-webkit-scrollbar {
+    width: 100px;
+    height: 10px;
+    margin-bottom: 10px;
+    color: black;
+}
+
+.container::-webkit-scrollbar-thumb {
+    width: 100px;
+    background-color:  black;
+    border-radius: 100px;
+}
+
+.container .n1 {
+    min-width: 350px;
+    height: 350px;
+    line-height: 200px;
+    text-align: center;
+    margin-right: 8px;
+    background-color: purple;
+    border-radius: 20px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.container .n1:hover {
+    transform: scale(1.02);
+    transition: transform all 0.3s ease;
+    border-radius: 20px;
+}
+
+.shoe_name {
+    transform: scale(1);
+    margin-bottom: 10px;
+    transition: transform 0.31s ease-in-out;
+    border-radius: 200px;
+    text-align: center;
+}
+
+/* Scrolling Images Details */
+.p1 {
+    font-size: 19px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Radio Canada Big', sans-serif;
+    margin-left: 2.6%;
+}
+
+.p2 {
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    margin-left: 3%;
+    color: grey;
+    margin-bottom: 8px;
+}
+
+.p3 {
+    font-size: 20px;
+    font-family: 'Radio Canada Big', sans-serif;
+    margin-left: 1px;
+    padding: 10px;
+}
+
+.spl {
+    font-size: 26px;
+    font-family: 'The Nautigal', sans-serif;
+    color: rgb(160, 137, 72);
+}
+
+/* End Description Part */
+.brand {
+    margin-top: 20px;
+    font-size: 50px;
+    font-family: 'The Nautigal', sans-serif;
+    color: rgb(160, 137, 72);
+    color: white;
+    text-align: center;
+    padding: 30px;
+    font-weight: 600;
+}
+
+/* Scrolling Text */
+.scroll-left, .sale {
     height: 50px;
     overflow: hidden;
     position: relative;
@@ -379,12 +384,13 @@ nav {
     white-space: nowrap; /* Prevent line break */
     position: absolute;
     transform: translateX(100%);
+    margin-top: 13px;
     animation: scroll-left 25s linear infinite;
 }
 
 .scroll-left img {
     height: 30px; /* Adjust the height of the Nike logo */
-    margin: 8px 10px; /* Space between the logo and text */
+    margin-top: -15px;
 }
 
 @keyframes scroll-left {
@@ -396,67 +402,140 @@ nav {
     }
 }
 
-.sale {
-    height: 50px;
-    overflow: hidden;
-    position: relative;
-    background: rgb(0, 0, 0);
-    color: white;
-    border: 1px solid black;
-}
-
-/*---Heading_"Live_sale"---------------------*/
-
-.new_arrivals {
-    display: flex;
-    justify-content: center;
-    margin-top: 3%;
-}
-
-.arrivals {
-    font-size: 35px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-family: "Helvetica Now Text Medium", Helvetica, Arial, sans-serif;
+/* Buy Button Styling */
+.buyx {
     text-align: center;
-    margin-top: 1px;
-    font-weight: 600;
+    margin-top: 100px;
+}
+
+.buy1 {
+    display: inline-block;
+    width: 150px;
+    height: 50px;
+    background-color: white;
+    color: black;
+    border-radius: 40px;
+    padding: 12px;
+    margin-left: 105px;
+    font-size: 17px;
+}
+
+.buy1:hover {
+    background-color: black;
     color: white;
-
 }
 
-.arrivals1 {
-    width: 50px;
+.buy1:active {
+    opacity: 0.5;
+}
+
+.pay{
+    margin-left: -100px;
+}
+
+.buy {
+    width: 80px;
+    height: 50px;
+    background-color: black;
+    color: white;
+    border-radius: 150px;
+    border: none;
+    outline: none;
+    margin-top: 5px;
+    margin-left: -50px;
+}
+
+.buy:hover {
+    cursor: pointer;
+}
+
+.buy:active {
+    opacity: 0.5;
 }
 
 
-
-
-.checkbtn {
+#checkx1,
+#checkx2,
+#checkx3,
+#checkx4,
+#checkx5,
+#checkx6,
+#checkx7,
+#checkx8,
+#checkx9 {
     display: none;
 }
 
-.btn-close {
-    font-size: 25px;
-    padding-top: 50px;
-    margin-left: 320px;
+.oj {
+    position: absolute;
+    display: none;
+    transition: opacity 0.5s ease-in-out;
+    
 }
 
-.offcanvas-body a{
+.tickx {
+    width: 300px;
     display: flex;
-    text-decoration: none;
-    font-family: "Inter", sans-serif;
+    background-color: white;
+    border-radius: 50px;
+    margin-top: 20px;
+    margin-left: 25px;
+    transition: all 0.3s ease;
+}
+
+.tickx img {
+    width: 35px;
+    margin: 20px;
+    margin-left: 40px;
+    transition: all 0.3s ease;
+}
+
+.tickx p {
+    transition: all 0.3s ease;
     color: black;
-    font-size: 28px;
-    font-size: 550;
-    margin-left: 50px;
-    padding-top: 33px;
+    margin: 20px;
+    margin-top: 16.3px;
+    margin-left: -10px;
+    font-size: 24px;
+    font-weight: 550;
+}
+
+#checkx {
+    display: none;
+}
+
+#checkx1:checked ~ .oj {
+    display: block;
+}
+
+.icon img {
+    position: absolute;
+    width: 55px;
+    margin-left: 0px;
+    margin-top: -35px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+body::-webkit-scrollbar {
+    width: 11px;
+    height: 300px;
+    margin-bottom: 100px;
+    background: url(login4.jpg);
+}
+
+body::-webkit-scrollbar-thumb {
+    height: 100px;
+    background-color: rgba(227, 227, 227, 0.863);
+    border-radius: 100px;
 }
 
 
 /* Media Queries for Responsiveness */
-@media (max-width: 900px) {
+@media (max-width: 900px) 
+{
     header {
-        width: 100%;
+        width: 105%;
         flex-direction: column;
         align-items: center;
         background-color: white;
@@ -464,6 +543,8 @@ nav {
 
     .checkbtn {
         display: block;
+        position: relative;
+        cursor: pointer;
         width: 100%;
     }
 
@@ -473,8 +554,16 @@ nav {
         display: block;
         float: right;
         margin-top: 11px;
-        margin-left: 345px;
+        margin-left: 350px;
         z-index: 1;
+    }
+
+    .offcanvas-body {
+        display: block;
+    }
+
+    .offcanvas-body {
+        width: 400px;
     }
 
     .logos {
@@ -482,6 +571,29 @@ nav {
         margin-bottom: 10px;
         margin-right: 30px;
         margin-left: -40px;
+    }
+
+    .h1 {
+        margin-top: 90px;
+        margin-left: -10px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-family: 'Radio Canada Big', sans-serif;
+        font-size: 30px;
+        padding: 30px;
+        color: white;
+    }
+
+    .container {
+        width: 100%;
+        max-height: 700px;
+        border: 1px solid #ddd;
+        margin-left: 10px;
+        display: flex;
+        overflow-x: auto;
+        border-radius: 30px;
+        background-color: white;
+        padding-top: 10px;
+        padding-left: 10px;
     }
 
     .search-box {
@@ -494,7 +606,7 @@ nav {
         border-radius: 40px;
         transition: all 0.3s ease-in-out;
         margin-top: 10px;
-        margin-left: 150px;
+        margin-left: 160px;
     }
 
     .j {
@@ -507,6 +619,31 @@ nav {
 
     nav {
         margin-right: 0;
+    }
+
+    .buy {
+        width: 79px;
+        height: 50px;
+        background-color: black;
+        color: white;
+        border-radius: 150px;
+        border: none;
+        outline: none;
+        margin-top: 5px;
+        margin-left: -50px;
+        font-size: 18px;
+    }
+
+    .pay{
+        margin-left: -80px;
+    }
+
+    .icon img {
+        position: absolute;
+        width: 55px;
+        margin-left: 15px;
+        margin-top: -35px;
+        transition: all 0.3s ease;
     }
 
     .nav_links {
@@ -529,8 +666,15 @@ nav {
         margin-left: 0px;
     }
 
-    .x {
-        margin-left: 0px
+    .jordan {
+        width: 18%;
+        display: block;
+        margin: auto;
+        margin-top: 35px;
+    }
+
+    .pega {
+        width: 90%;
     }
 }
 
@@ -563,3 +707,4 @@ nav {
         margin-left: 50px;
     }
 }
+
